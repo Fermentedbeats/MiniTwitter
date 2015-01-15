@@ -3,13 +3,13 @@
 #  part2 login/signup get & post
 
 get '/' do
-  @tweets = Tweet.all
+  @tweets = Tweet.all.reverse
   @users = User.all
   erb :index
 end
 
 post '/' do
-  @tweet = Tweet.create(params[:tweet])
+  Tweet.create(params[:tweet])
   redirect '/'
 end
 
