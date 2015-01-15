@@ -1,11 +1,80 @@
 /*Put Stylish Shiz here*/
 
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  margin: 10%;
+  width: 80%;
+  height: 80%;
 }
-th {
-  text-align: left;
+
+p {
+  text-align: center;
+  font-size: 3em;
+}
+
+#gravatar_img {
+  width: 8em;
+}
+
+.title {
+  display: block;
+}
+
+.follow_stuff {
+  border: solid 10px black;
+  width: 10%;
+  height: 400px;
+  display: inline-block;
+  float: left;
+}
+
+.tweets {
+  border: solid 1px black;
+  width: 75%;
+  height: 30%;
+  display: inline-block;
+  float: right;
+  padding: 12px;
+}
+
+.submit {
+  display: inline-block;
+  float: right;
+}
+
+.nav {
+  background-color: #89C1DD;
+}
+
+.header {
+  display: inline-block;
+  margin-top: 20%;
+
+}
+
+.jumbotron {
+  background-image: url("https://ps.w.org/mini-twitter-feed/assets/banner-772x250.jpg?rev=531916");
+  background-size: cover;
+  height: 180%;
+  color: #FFFFFF;
+  background-color: #BEDFEF;
+
+}
+
+.jumbotron h4 {
+  color: #0FBEE6;
+}
+
+html {
+  background-color: #BEDFEF;
+}
+body {
+  background-color: #BEDFEF;
+}
+
+.tweets {
+  background-color: white;
+}
+
+.content {
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }

@@ -1,33 +1,65 @@
-<div class="container">
-
-<div class="title">
-  <div id='gravatar'></div>
-  <div id='user'></div>
-  <div id='logout'></div>
+<div class='nav'>
+  <div class='pull-right'>
+  <div id='gravatar' class="header"><img id='gravatar_img' src='https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/038/221/2d4502f.jpg'/>
+  </div>
+  <div id='user' class="header">
+  </div>
+  <%# session user_id: grab user_id & have it populate name %>
+  <div id='logout' class="header">
+  <input type='submit' value='logout'>
+  </div>
+  </div>
 </div>
+
+
+<div class="jumbotron">
+<div class="container">
+<h1>MiniTwitter</h1>
+<h4>The New Way to Connect</h4>
+</div>
+
+</div>
+
+
+
+
 
 <div class="follow_stuff">
-  <div id='following'></div>
-  <div id='followers'></div>
+  <div id='following' class="follow_stuff"></div>
+  <div id='followers' class="follow_stuff"></div>
 </div>
 
-<div class='tweets'>
+
+<form action='/' method="post" class ='submit'>
+<input type='text' name='tweet[content]' placeholder='Enter your tweet'>
+<br>
+<input type='submit'>
+</form>
+
+
+
+<div >
   <% @tweets.each do |tweet| %>
-    <div>
+    <div class='tweets'>
       <div class ='tweet_meta'>
-      <% #MD5/Gravatar %>
-      <%= tweet.handle %>
-      <%= tweet.created_at %>
+      <%#MD5/Gravatar  %>
+      <%#tweet.handle  %>
+      <%#tweet.created_at  %>
         </div>
       <div class ='content'>
         <%= tweet.content %>
-      </div\
+      </div>
 
     </div>
-<%end%>
+  <%end%>
 
 </div>
 
-<div class='new_tweet'></div>
+<div class='new_tweet'>
+<%# user passes in content%>
+
+
+
+</div>
 
 </div>
