@@ -1,0 +1,33 @@
+<div class="container">
+
+<div class="title">
+  <div id='gravatar'></div>
+  <div id='user'></div>
+  <div id='logout'></div>
+</div>
+
+<div class="follow_stuff">
+  <div id='following'></div>
+  <div id='followers'></div>
+</div>
+
+<div class='tweets'>
+  <% @tweets.each do |tweet| %>
+    <div>
+      <div class ='tweet_meta'>
+      <% #MD5/Gravatar %>
+      <%= tweet.handle %>
+      <%= tweet.created_at %>
+        </div>
+      <div class ='content'>
+        <%= tweet.content %>
+      </div\
+
+    </div>
+<%end%>
+
+</div>
+
+<div class='new_tweet'></div>
+
+</div>
