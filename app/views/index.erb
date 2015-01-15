@@ -1,4 +1,5 @@
 <div class="container">
+<p>MiniTwitter</p>
 
 <div class="title">
   <div id='gravatar'></div>
@@ -21,13 +22,21 @@
         </div>
       <div class ='content'>
         <%= tweet.content %>
-      </div\
+      </div>
 
     </div>
 <%end%>
 
 </div>
 
-<div class='new_tweet'></div>
+<div class='new_tweet'>
+# user passes in content
+<form action='/' method="post">
+<input type='text' name='tweets[content]' placeholder='Enter your tweet'><br>
+<input type='submit'>
+</form>
+
+
+</div>
 
 </div>
