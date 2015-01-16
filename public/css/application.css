@@ -40,22 +40,23 @@ p {
 }
 
 .follow_stuff {
-  border: solid 1px white;
   width: 15%;
   height: relative;
   display: inline-block;
   float: left;
   position: relative;
+  padding: 40%;
 }
 
 .follow_stuff img {
   width: 3em;
   height: 3em;
+  margin-bottom: 40%;
 }
 
 .follow_stuff ul {
   list-style-type: none;
-  margin: 10%;
+  margin: 40%;
 }
 
 .follow_stuff p {
@@ -108,13 +109,12 @@ width: relative;
   float: right;
 }
 
-/*.sidebar {
-  position: absolute;
-  top: 0;
-  bottom:0;
+.sidebar {
+  top: 20%;
+  bottom:20%;
   left: 0;
   width: 50px;
-}*/
+}
 
 
 .tweets {

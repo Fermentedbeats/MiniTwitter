@@ -5,7 +5,7 @@
 <div class='nav'>
 
   <div class="pull-left">
-    <a href="#" class="btn btn-primary btn-md active" role="button">Home</a>
+    <a href="/" class="btn btn-primary btn-md active" role="button">Home</a>
   </div>
 
   <div class='pull-right'>
@@ -15,10 +15,10 @@
     </div>
     <%# session user_id: grab user_id & have it populate name %>
     <div id='logout' class="header">
-   <!-- <input type='submit' value='logout' class="btn btn-primary btn-md active" role="button"> -->
-   <a href="/logout" class="btn btn-primary btn-md active" role="button">Logout</a>
-    </div>
-  </div>
+     <!-- <input type='submit' value='logout' class="btn btn-primary btn-md active" role="button"> -->
+     <a href="/logout" class="btn btn-primary btn-md active" role="button">Logout</a>
+   </div>
+ </div>
 
 </div>
 
@@ -36,56 +36,75 @@
 </div>
 
 <div class='container'>
-<div class='row'>
-  <div class ='col-md-10'>
-  <form action='/' method="post" class ='submit'>
-    <input type='text' name='tweet[content]' placeholder='Enter your tweet'>
-    <br>
-  <input type='submit'>
-  </form>
-  </div>
-  <div class ='col-md-2'>
-  </div>
-</div>
-
-<div class="sidebar">
-  <div id='following' class="follow_stuff">
-    <ul>
-      <li>
-        <img src="http://www.colemanphotographix.com/wp-content/uploads/WomensHeadshot-0015.jpg">
-      </li>
-      <li>
-        <img src="http://www.colemanphotographix.com/wp-content/uploads/WomensHeadshot-0015.jpg">
-      </li>
-      <li>
-        <img src="http://www.colemanphotographix.com/wp-content/uploads/WomensHeadshot-0015.jpg">
-      </li>
-    </ul>
-
+  <div class='row'>
+    <div class ='col-md-10'>
+      <form action='/' method="post" class ='submit'>
+        <input type='text' name='tweet[content]' placeholder='Enter your tweet'>
+        <br>
+        <input type='submit'>
+      </form>
+    </div>
+    <div class ='col-md-2'>
+    </div>
   </div>
 
+  <div class="sidebar">
+    <div id='following' class="follow_stuff">
+      <ul>
+        <h4>Followers</h4>
+        <li>
+          <img src="http://www.colemanphotographix.com/wp-content/uploads/WomensHeadshot-0015.jpg">
+        </li>
+        <li>
+          <img src="http://upload.wikimedia.org/wikipedia/commons/3/30/Ian-clarke-headshot-1.jpg">
+        </li>
+        <li>
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ--i--3xt3J9-ggDhtEhR99OZgOacL11aAduwwZXOR_zRc8LpX">
+        </li>
+      </ul>
+
+    </div>
+
+    <div id='followers' class="follow_stuff">
+      <ul>
+        <h4>Following</h4>
+        <li>
+          <img src="http://diversity.philadelphiabar.org/images/headshots/Epstein-Henry-Headshot.jpg">
+        </li>
+        <li>
+          <img src="http://www.headshots101.com/img/Acting_Headshots_Los_Angeles_TY73.jpg">
+
+        </li>
+
+
+        <li>
+
+          <img src="https://s-media-cache-ak0.pinimg.com/236x/b1/88/b5/b188b5b797ec26d5704d15790cb5b0c4.jpg">
+        </li>
+
+      </ul>
+
+    </div>
 
   </div>
-  <div id='followers' class="attention">
-</div>
 
 
 
 
-<div class ="feed">
-  <% @tweets.each do |tweet| %>
+  <div class ="feed">
+    <% @tweets.each do |tweet| %>
     <div class='tweets'>
       <div class ='tweet_meta'>
-      <%#MD5/Gravatar  %>
-      <%#tweet.handle  %>
-      <%#tweet.created_at  %>
+        <%#MD5/Gravatar  %>
+        <%#tweet.handle  %>
+        <%#tweet.created_at  %>
       </div>
       <div class ='content'>
         <%= tweet.content %>
       </div>
     </div>
-  <%end%>
-</div>
+    <%end%>
+  </div>
 </div>
 
 <div class="footer">
