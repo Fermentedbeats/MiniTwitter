@@ -1,65 +1,79 @@
+
+
+
+
 <div class='nav'>
+
+  <div class="pull-left">
+    <a href="#" class="btn btn-primary btn-md active" role="button">Home</a>
+  </div>
+
   <div class='pull-right'>
-  <div id='gravatar' class="header"><img id='gravatar_img' src='https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/038/221/2d4502f.jpg'/>
+    <div id='gravatar' class="header"><img id='gravatar_img' src='http://media4.popsugar-assets.com/files/2013/10/18/233/n/1922283/ad57fc860e590b49_thumb_temp321963991382151012.xxxlarge/i/Arnold-Schwarzenegger-Recites-Lines-Reddit.jpg'/>
+    </div>
+    <div id='user' class="header">
+    </div>
+    <%# session user_id: grab user_id & have it populate name %>
+    <div id='logout' class="header">
+   <input type='submit' value='logout' class="btn btn-primary btn-md active" role="button">
+    </div>
   </div>
-  <div id='user' class="header">
-  </div>
-  <%# session user_id: grab user_id & have it populate name %>
-  <div id='logout' class="header">
-  <input type='submit' value='logout'>
-  </div>
-  </div>
+
 </div>
+
 
 
 <div class="jumbotron">
-<div class="container">
-<h1>MiniTwitter</h1>
-<h4>The New Way to Connect</h4>
+  <div class="container">
+    <h1>MiniTwitter</h1>
+    <h4>The New Way to Connect</h4>
+  </div>
 </div>
 
+<div class='container'>
+<div class='row'>
+  <div class ='col-md-10'>
+  <form action='/' method="post" class ='submit'>
+    <input type='text' name='tweet[content]' placeholder='Enter your tweet'>
+    <br>
+  <input type='submit'>
+  </form>
+  </div>
+  <div class ='col-md-2'>
+  </div>
 </div>
 
-
-
-
-
-<div class="follow_stuff">
+<!-- <div class="follow_stuff">
   <div id='following' class="follow_stuff"></div>
   <div id='followers' class="follow_stuff"></div>
-</div>
-
-
-<form action='/' method="post" class ='submit'>
-<input type='text' name='tweet[content]' placeholder='Enter your tweet'>
-<br>
-<input type='submit'>
-</form>
+</div> -->
 
 
 
-<div >
+
+<div class ="feed">
   <% @tweets.each do |tweet| %>
     <div class='tweets'>
       <div class ='tweet_meta'>
       <%#MD5/Gravatar  %>
       <%#tweet.handle  %>
       <%#tweet.created_at  %>
-        </div>
+      </div>
       <div class ='content'>
         <%= tweet.content %>
       </div>
-
     </div>
   <%end%>
-
+</div>
 </div>
 
-<div class='new_tweet'>
-<%# user passes in content%>
-
-
-
+<div class="footer">
+  <h3>Share your thoughts.</h3>
 </div>
 
+<div class="stage">
+  <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/038/221/2d4502f.jpg" class="ball"></figure>
 </div>
+
+
+
