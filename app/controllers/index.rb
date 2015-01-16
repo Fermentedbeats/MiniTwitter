@@ -13,12 +13,22 @@ post '/' do
   redirect '/'
 end
 
-# get '/login' do
-# #Bcrypt/Authentication
-#   erb :login
-#   end
+get '/login' do
+  erb :login
+end
 
-# post
-# #Other shit
-# redirect '/'
-# end
+post '/login' do
+  user = User.find_by(handle: params[:handle])
+  if user.authenticate(params[:password])
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    erb :login
+  end
+  # authenticate user
+  # if user.authenticate, start session with user_id, redirect to main page
+  # else redirect to /login
+end
+
+# def twitter_time
+#   Time.now-ru
