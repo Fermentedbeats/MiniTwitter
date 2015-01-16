@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include BCrypt
   has_many :tweets
   validates :handle, presence: true
 
@@ -9,12 +10,12 @@ class User < ActiveRecord::Base
   # has_many :users_following, :through => :followings, :source => :follower
 
   def password
-    @password ||= BCrypt::Password.new(encrypted_password)
+    @password ||= BCrypt::Password.new(password_hash)
   end
 
   def password=(new_password)
     @password = BCrypt::Password.create(new_password)
-    self.encrypted_password = @password
+    self.password_hash = @password
   end
 
   def authenticate(plain_text_password)
