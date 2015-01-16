@@ -30,5 +30,16 @@ post '/login' do
   # else redirect to /login
 end
 
-# def twitter_time
-#   Time.now-ru
+get '/register' do
+  erb :register
+end
+
+post '/register' do
+  user = User.create(params[:user])
+  if user.authenticate(params[:password])
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    erb :register
+  end
+end
