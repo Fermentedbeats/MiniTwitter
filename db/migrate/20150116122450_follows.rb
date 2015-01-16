@@ -1,6 +1,8 @@
-class Follows < ActiveRecord::Migration
-  def change
-    create :follows do |t|
-      t.
-  end
-end
+# class Follows < ActiveRecord::Migration
+#   def change
+#     create_table :follows do |t|
+#       t.integer :follower_id
+#       t.integer :followed_id
+#     end
+#   end
+# end
