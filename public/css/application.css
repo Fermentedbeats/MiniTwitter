@@ -40,11 +40,26 @@ p {
 }
 
 .follow_stuff {
-  border: solid 10px black;
-  width: 10%;
-  height: 400px;
+  border: solid 1px white;
+  width: 15%;
+  height: relative;
   display: inline-block;
   float: left;
+  position: relative;
+}
+
+.follow_stuff img {
+  width: 3em;
+  height: 3em;
+}
+
+.follow_stuff ul {
+  list-style-type: none;
+  margin: 10%;
+}
+
+.follow_stuff p {
+  font-size: 65%;
 }
 
 .feed {
@@ -76,13 +91,12 @@ width: relative;
   color: #0FBEE6;
 }
 
+.nav {
+  background-color: #89C1DD;
+}
 
 .title {
   display: block;
-}
-
-.nav {
-  background-color: #89C1DD;
 }
 
 .row {
@@ -94,6 +108,14 @@ width: relative;
   float: right;
 }
 
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  width: 50px;
+}
+
 
 .tweets {
   border: solid 1px black;
@@ -103,11 +125,14 @@ width: relative;
   float: right;
   padding: 12px;
   border-radius: 25px;
+  background-color: white;
+  margin: 1%;'
+  transition: all 1.5s ease-in-out;
 }
 
-.tweets {
-  background-color: white;
-  margin: 1%;
+.tweets:hover {
+  transform: scale(1.5);
+
 }
 
 
@@ -151,9 +176,6 @@ width: relative;
   -webkit-animation-play-state: paused;
 }
 
-.stage:hover .ball {
-
-}
 
 
 
